@@ -1,0 +1,128 @@
+/* ../css/Timeline.css */
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.timeline {
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative; /* Added to position the timeline line */
+  }
+  .timeline p{
+    text-wrap: wrap;
+  }
+  .timeline span {
+    color: #19191A;
+    background-color: #fff;
+  }
+  .awards, .paes{
+    font-weight: bold;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 47.5%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+  }
+  
+
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* Adjusted for vertical alignment */
+    transform: translate(-50%, -50%); /* Adjusted for vertical alignment */
+    left: 45%; /* Adjusted for better horizontal alignment (experiment with values) */
+    width: 17px;
+    height: 17px;
+    background-color: #6a5acd;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.timeline li {
+    position: relative;
+    margin-bottom: 30px;
+    width: 50%; /* Adjust width for even distribution */
+  }
+
+.timeline-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+  }
+
+.timeline-content h1,
+.timeline-content p,
+.timeline-content .date {
+    background-color: #ffffff;
+    color: #19191A;
+  }
+
+.timeline-content h1 {
+    font-weight: 500;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+
+.timeline-content p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+
+.timeline-content .date {
+    font-size: 1em;
+    font-weight: 500;
+    color: #555555;
+    margin-bottom: 5px;
+  }
+
+.timeline li:nth-child(odd) .timeline-content {
+    left: 60%; /* Adjusted for proper alignment */
+  }
+
+.timeline li:nth-child(even) .timeline-content {
+    right: 60%; /* Adjusted for proper alignment */
+  }
+
+/* Media Query for Smaller Screens */
+@media only screen and (max-width: 767px) {
+    .timeline-content {
+        padding: 15px;
+    }
+
+    .timeline-content h1 {
+        font-size: 18px;
+    }
+
+    .timeline-content p {
+        font-size: 12px;
+    }
+
+    .timeline-content .date {
+        font-size: 10px;
+    }
+}
