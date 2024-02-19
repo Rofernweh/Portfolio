@@ -22,6 +22,10 @@ const SliderComponent = () => {
                 <h1>{t('projects.project2.title')}</h1>
                 <p>{t('projects.project2.description')}</p>
             </div>
+            <div className='projects-buttons'>
+                <a href='https://github.com/' target='_blank' rel='noreferrer'>{t('projects.sourcecode')}</a>
+                <a href='https://vercel.com/' target='_blank' rel='noreferrer'>{t('projects.livedemo')}</a>
+            </div>
         </article>
         <article className='card-3'>
             <div className='card-image'>

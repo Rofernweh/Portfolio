@@ -107,7 +107,38 @@
 .timeline li:nth-child(even) .timeline-content {
     right: 60%; /* Adjusted for proper alignment */
   }
+  @media only screen and (max-width: 1024px) {
+    .timeline li:nth-child(odd) .timeline-content {
+      left: 40%; /* Adjusted for proper alignment */
+    }
+  
+    .timeline li:nth-child(even) .timeline-content {
+      right: 40%; /* Adjusted for proper alignment */
+    }
+    .timeline li:nth-child(odd) .timeline-content,
+    .timeline li:nth-child(even) .timeline-content {
+      left: 50%;
+      transform: translateX(-50%);
+      right: auto;
+    }
+    .timeline-content{
+      width: 100%;
+    }
+    .timeline li{
+      width: 90%;
+    }
+    .timeline li::before{
+      z-index: 0;
+    }
+    .timeline::before{
+      z-index: 0;
+      height: 80%;
+    }	
+    
 
+  }
+  
+  
 /* Media Query for Smaller Screens */
 @media only screen and (max-width: 767px) {
     .timeline-content {

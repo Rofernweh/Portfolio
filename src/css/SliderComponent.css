@@ -68,3 +68,9 @@
     border-radius: 40px;
     border: 2px solid #19191A;
   }
+
+@media only screen and (max-width: 1024px) {
+  .card-container article {
+    width: 85%;
+  }
+}
