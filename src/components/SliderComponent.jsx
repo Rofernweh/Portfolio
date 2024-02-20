@@ -56,7 +56,7 @@ const SliderComponent = () => {
         </article>
         <article className='card-6'>
             <div className='card-image'>
-                <img src='https://fakeimg.pl/480x270' alt='project' />
+                <img src='/Mimskin.png' alt='project' />
             </div>
             <div className='card-content'>
                 <h1>{t('projects.project6.title')}</h1>

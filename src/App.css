@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  padding: 0;
   
 }
 
@@ -46,6 +47,23 @@ h1 {
 }
 .home-title {
   margin-top: 4.5em;
+}
+@media (max-width: 915px) and (max-height: 412px) {
+  .home-title {
+    margin-bottom: 16em;
+  }
+}
+
+
+@media (max-width: 450px) and (max-height: 940px) {
+  .home-title {
+    margin-bottom: 11em;
+  }
+}
+@media (max-width: 380px) and (max-height: 670px) {
+  .home-title {
+    margin-bottom: 4em;
+  }
 }
 
 .SineWave {
@@ -105,7 +123,8 @@ h1 {
 @media screen and (max-width: 1400px) {
   
   .about-me {
-    max-width: 60vw;
+    max-width: 90vw;
+    margin: 2em;
   }
   
 }
@@ -129,7 +148,6 @@ h1 {
   background-clip: text;
 
 }
-
 .about-me .arduino {
   background-color: #0F7391;
   font-weight: bold;
@@ -146,7 +164,7 @@ h1 {
 }
 
 .projects-title {
-  margin: 1rem 0;
+  margin: 0rem 0 3rem 0;
   background-color: #2196f3;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -166,12 +184,14 @@ h1 {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  padding: 0;
   text-align: center;
   align-items: center;
+  justify-content: space-around;
   text-wrap: wrap;
 }
 .contact-title {
-  margin: 1rem 0;
+  margin: 3rem 0 4rem 0;
   background-color: #ff9800;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -190,11 +210,10 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 15px;
-  width: 25em; /* Adjust width as needed */
-  margin: 1em;
-  padding: 4em;
+  width: 80%; /* Reducir el ancho del formulario en pantallas más pequeñas */
+  height: 40vh;
+  padding: 2em;
   border: 2px solid #ccc;
   border-radius: 5px;
 }
@@ -202,13 +221,21 @@ h1 {
 .contact-section input,
 .contact-section textarea,
 .contact-section button {
-  width: 100%;
-  padding: 1em;
+  width: 100%; /* Hacer que los elementos ocupen todo el ancho del formulario */
   border: 1px solid #ccc;
+  padding: 1em;
   border-radius: 5px;
   font-size: 16px;
   margin-bottom: 10px;
 }
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .contact-section form {
+    width: 90%; /* Reducir aún más el ancho del formulario en pantallas muy pequeñas */
+  }
+}
+
 
 .contact-section button {
   color: #fff;
